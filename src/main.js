@@ -1,13 +1,16 @@
-import Vue from 'vue'
-import './plugins/vuetify'
-import App from './App.vue'
-import router from './router';
+import Vue from "vue";
+import "./plugins/vuetify";
+import App from "./App.vue";
 
-Vue.config.productionTip = false
+import router from "./router";
+import store from "./store/store";
 
-
-
+Vue.config.productionTip = false;
+/**
+ * Instância central do vue
+ */
 new Vue({
-	router,
-	render: h => h(App),
-}).$mount('#app')
+  router,
+  store,
+  render: h => h(App)
+}).$mount("#app");
